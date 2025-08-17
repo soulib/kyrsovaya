@@ -1,0 +1,150 @@
+/* Стили для планшетов (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Общие стили */
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Шапка */
+  .header .container {
+    padding: 12px 20px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  /* Герой секция */
+  .hero {
+    height: 60vh;
+    margin-top: 65px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  /* Преимущества */
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .advantage-item {
+    padding: 1.5rem;
+  }
+
+  /* Каталог */
+  .parts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .part-image {
+    height: 180px;
+  }
+
+  /* Бренды */
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* О компании */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    margin-bottom: 2rem;
+  }
+
+  /* Отзывы */
+  .testimonial-content {
+    padding: 1.5rem;
+  }
+
+  /* Консультация */
+  .consult-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-content {
+    margin-bottom: 2rem;
+  }
+
+  /* Контакты */
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map {
+    height: 300px;
+    margin-top: 2rem;
+  }
+
+  /* Подвал */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Модальное окно */
+  .modal-content {
+    width: 80%;
+  }
+
+  /* Специальные стили для планшетов в ландшафтной ориентации */
+  @media (orientation: landscape) {
+    .hero {
+      height: 80vh;
+      background-position: 70% center;
+    }
+
+    .advantages-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .parts-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Оптимизация для touch-устройств */
+  @media (hover: none) {
+    .part-item:hover {
+      transform: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .advantage-item:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    
+    .btn:hover {
+      transform: none;
+    }
+  }
+
+  /* Увеличение кликабельных зон */
+  a, button, input[type="submit"], input[type="button"] {
+    min-height: 40px;
+  }
+}

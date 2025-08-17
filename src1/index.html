@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PROAuto - Премиальные аккумуляторы</title>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		:root {
+			--primary: #000000;
+			--secondary: #FF6B00;
+			--accent: #FF8C00;
+			--dark: #121212;
+			--darker: #080808;
+			--text: #E0E0E0;
+			--text-light: #A0A0A0;
+		}
+	
+  /* Фоновое изображение для всего сайта */
+	body {
+	font-family: 'Roboto', sans-serif;
+	color: var(--text);
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	background:
+	linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+	url('images/car-blurred.jpg') center/cover fixed;
+	background-attachment: fixed;
+	min-height: 100vh;
+	}
+	
+	/* Основной контент с полупрозрачным фоном */
+	.content-wrapper {
+	background: var(--dark);
+	backdrop-filter: blur(5px);
+	box-shadow: 0 0 50px rgba(0,0,0,0.7);
+	position: relative;
+	min-height: 100vh;
+	}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			color: var(--text);
+			background-color: var(--dark);
+			line-height: 1.6;
+			margin: 0;
+			padding: 0;
+			background-image:
+				radial-gradient(circle at 20% 30%, rgba(255, 107, 0, 0.03) 0%, transparent 25%),
+				radial-gradient(circle at 80% 70%, rgba(255, 107, 0, 0.03) 0%, transparent 25%);
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Oswald', sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: var(--secondary);
+			position: relative;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+	/* Стили для секции брендов */
+	.brands {
+	padding: 80px 0;
+	background: var(--darker);
+	border-top: 1px solid rgba(255,107,0,0.2);
+	border-bottom: 1px solid rgba(255,107,0,0.2);
+	}
+	
+	.brands-title {
+	text-align: center;
+	font-size: 2.5rem;
+	margin-bottom: 50px;
+	position: relative;
+	}
+	
+	.brands-title::after {
+	content: '';
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 3px;
+	background: linear-gradient(90deg, var(--secondary), var(--accent));
+	}
+	
+	.brands-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 40px;
+	align-items: center;
+	padding: 0 20px;
+	}
+	
+	.brand-item {
+	background: rgba(255,255,255,0.05);
+	padding: 25px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	transition: all 0.3s;
+	border: 1px solid rgba(255,107,0,0.1);
+	}
+	
+	.brand-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 15px rgba(255,107,0,0.2);
+	border-color: rgba(255,107,0,0.3);
+	}
+	
+	.brand-item img {
+	max-width: 100%;
+	max-height: 60px;
+	filter: grayscale(100%) brightness(1.5);
+	transition: all 0.3s;
+	opacity: 0.8;
+	}
+	
+	.brand-item:hover img {
+	filter: grayscale(0) brightness(1.2);
+	opacity: 1;
+	}
+
+		/* Шапка с эффектом стекла */
+		header {
+			background: rgba(18, 18, 18, 0.85);
+			padding: 15px 0;
+			border-bottom: 3px solid var(--secondary);
+			backdrop-filter: blur(10px);
+			position: sticky;
+			top: 0;
+			z-index: 100;
+		}
+
+		.logo a {
+			font-size: 28px;
+			font-weight: 700;
+			color: var(--secondary);
+			text-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+		}
+
+		.logo span {
+			color: var(--accent);
+		}
+
+		/* Главный баннер с параллакс-эффектом */
+		.banner {
+			background:
+				linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+				url('images/battery-factory.jpg') center/cover fixed;
+			padding: 120px 0;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.banner h1 {
+			font-size: 3.5rem;
+			margin-bottom: 25px;
+			animation: fadeInUp 1s ease;
+		}
+
+		.banner::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 10px;
+			background: linear-gradient(90deg, var(--secondary), var(--accent));
+		}
+
+		/* Секция с товарами */
+		.products {
+			padding: 80px 0;
+			background: url('images/hexagon-pattern.png') center/cover;
+		}
+
+		.section-title {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.section-title::after {
+			content: '';
+			display: block;
+			width: 80px;
+			height: 4px;
+			background: linear-gradient(90deg, var(--secondary), var(--accent));
+			margin: 15px auto 0;
+		}
+
+		.product-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			gap: 30px;
+			margin-top: 40px;
+		}
+
+		/* Карточка товара с 3D эффектом */
+		.product-card {
+			background: rgba(8, 8, 8, 0.8);
+			border-left: 4px solid var(--secondary);
+			padding: 25px;
+			transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+			position: relative;
+			overflow: hidden;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+		}
+
+		.product-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.1), transparent);
+			transition: 0.6s;
+		}
+
+		.product-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+		}
+
+		.product-card:hover::before {
+			left: 100%;
+		}
+
+		.product-card img {
+			width: 100%;
+			height: 200px;
+			object-fit: contain;
+			filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+			transition: transform 0.4s;
+		}
+
+		.product-card:hover img {
+			transform: scale(1.05);
+		}
+
+		.price {
+			font-size: 26px;
+			font-weight: 700;
+			color: var(--secondary);
+			margin: 20px 0;
+			display: inline-block;
+		}
+
+		.price::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: var(--accent);
+			margin-top: 5px;
+		}
+
+		/* Кнопки с градиентом */
+		.btn {
+			display: inline-block;
+			padding: 14px 35px;
+			background: linear-gradient(135deg, var(--secondary), var(--accent));
+			color: #000;
+			font-weight: 700;
+			text-transform: uppercase;
+			border: none;
+			cursor: pointer;
+			transition: all 0.3s;
+			position: relative;
+			overflow: hidden;
+			box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+			letter-spacing: 1px;
+		}
+
+		.btn:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+		}
+
+		.btn:active {
+			transform: translateY(1px);
+		}
+
+		/* О компании с текстурированным фоном */
+		.about {
+			padding: 80px 0;
+			background:
+				linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+				url('images/carbon-fiber.jpg') center/cover;
+			position: relative;
+		}
+
+		.about-content {
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: center;
+			position: relative;
+			z-index: 2;
+		}
+
+		.features {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 30px;
+			margin-top: 40px;
+		}
+
+		.feature-item {
+			background: rgba(255, 107, 0, 0.1);
+			padding: 20px;
+			border-left: 3px solid var(--secondary);
+			flex: 1;
+			min-width: 250px;
+			transition: all 0.3s;
+		}
+
+		.feature-item:hover {
+			background: rgba(255, 107, 0, 0.2);
+			transform: translateY(-5px);
+		}
+
+		.feature-item i {
+			font-size: 2rem;
+			color: var(--secondary);
+			margin-bottom: 15px;
+		}
+
+		/* Подвал с эффектом свечения */
+		footer {
+			background: var(--darker);
+			padding: 50px 0 20px;
+			border-top: 3px solid var(--secondary);
+			position: relative;
+		}
+
+		footer::before {
+			content: '';
+			position: absolute;
+			top: -3px;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+		}
+
+		.footer-content {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 30px;
+		}
+
+		.footer-column {
+			flex: 1;
+			min-width: 200px;
+		}
+
+		.footer-column h3 {
+			color: var(--secondary);
+			margin-bottom: 20px;
+			font-size: 1.3rem;
+		}
+
+		.social-links {
+			display: flex;
+			gap: 15px;
+			margin-top: 20px;
+		}
+
+		.social-links a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			background: rgba(255, 107, 0, 0.1);
+			color: var(--secondary);
+			border-radius: 50%;
+			transition: all 0.3s;
+		}
+
+		.social-links a:hover {
+			background: var(--secondary);
+			color: #000;
+			transform: translateY(-3px);
+		}
+
+		/* Анимации */
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.05);
+			}
+
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		.pulse {
+			animation: pulse 2s infinite;
+		}
+
+		/* Адаптивность */
+		@media (max-width: 768px) {
+			.banner h1 {
+				font-size: 2.5rem;
+			}
+
+			.product-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Шапка сайта -->
+<header style="background: var(--darker); padding: 15px 0; border-bottom: 3px solid var(--secondary); position: sticky; top: 0; z-index: 1000;">
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
+    <!-- Логотип и название -->
+    <div class="logo" style="flex: 1;">
+      <a href="index.html" style="font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700; color: var(--secondary); text-decoration: none;">
+        PRO<span style="color: var(--accent);">Auto</span>
+      </a>
+    </div>
+    
+    <!-- Основная навигация -->
+    <nav class="main-nav" style="flex: 2;">
+      <ul style="display: flex; justify-content: center; gap: 30px; list-style: none; margin: 0; padding: 0;">
+        <li><a href="index.html" style="color: var(--text); text-decoration: none; font-weight: 500; transition: color 0.3s; position: relative; padding: 5px 0;">
+          Главная
+          <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--secondary); transition: width 0.3s;"></span>
+        </a></li>
+        <li><a href="catalog.html" style="color: var(--secondary); text-decoration: none; font-weight: 700; position: relative; padding: 5px 0;">
+          Каталог
+          <span style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--accent);"></span>
+        </a></li>
+        <li><a href="#services" style="color: var(--text); text-decoration: none; font-weight: 500; transition: color 0.3s; position: relative; padding: 5px 0;">
+          Услуги
+          <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--secondary); transition: width 0.3s;"></span>
+        </a></li>
+        <li><a href="#about" style="color: var(--text); text-decoration: none; font-weight: 500; transition: color 0.3s; position: relative; padding: 5px 0;">
+          О нас
+          <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--secondary); transition: width 0.3s;"></span>
+        </a></li>
+        <li><a href="#contacts" style="color: var(--text); text-decoration: none; font-weight: 500; transition: color 0.3s; position: relative; padding: 5px 0;">
+          Контакты
+          <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--secondary); transition: width 0.3s;"></span>
+        </a></li>
+      </ul>
+    </nav>
+    
+    <!-- Корзина и контакты -->
+    <div class="header-actions" style="flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 20px;">
+      <a href="tel:+74951234567" style="color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 5px;">
+        <i class="fas fa-phone" style="color: var(--accent);"></i>
+        <span style="font-weight: 500;">+7 (495) 123-45-67</span>
+      </a>
+      <a href="cart.html" style="color: var(--text); text-decoration: none; position: relative;">
+        <i class="fas fa-shopping-cart" style="font-size: 1.2rem;"></i>
+        <span class="cart-count" style="position: absolute; top: -8px; right: -8px; background: var(--secondary); color: #000; border-radius: 50%; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Анимации для навигации */
+  .main-nav a:hover {
+    color: var(--secondary) !important;
+  }
+  
+  .main-nav a:hover span {
+    width: 100% !important;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 992px) {
+    .main-nav {
+      display: none;
+    }
+    
+    .header-actions {
+      display: none !important;
+    }
+    
+    /* Мобильное меню */
+    .mobile-menu-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      cursor: pointer;
+    }
+    
+    .mobile-menu-btn span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: var(--secondary);
+      transition: all 0.3s;
+    }
+  }
+</style>
+
+	<!-- Главный баннер с оформленными фото -->
+<section class="banner" style="padding: 100px 0; position: relative; overflow: hidden;">
+  <div class="container" style="display: flex; align-items: center; gap: 50px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
+    <!-- Текстовый контент -->
+    <div class="banner-content" style="flex: 1; min-width: 300px; z-index: 2;">
+      <h1 style="color: var(--secondary); font-size: 3rem; margin-bottom: 20px; line-height: 1.2;">
+        ПРОФЕССИОНАЛЬНЫЕ<br>АККУМУЛЯТОРЫ
+      </h1>
+      <p style="color: var(--text); font-size: 1.1rem; margin-bottom: 30px;">
+        Широкий выбор качественных аккумуляторов для любых автомобилей с гарантией и бесплатной доставкой
+      </p>
+      <a href="catalog.html" class="btn" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, var(--secondary), var(--accent)); color: #000; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s;">
+        Перейти в каталог
+      </a>
+    </div>
+    
+    <!-- Галерея фото в рамках -->
+    <div class="banner-gallery" style="flex: 1; position: relative; min-width: 300px; height: 400px; z-index: 1;">
+      
+      <!-- Фото 1 (главное) -->
+      <div class="photo-frame main-photo" style="position: absolute; top: 0; right: 0; width: 80%; height: 80%; border: 10px solid var(--darker); box-shadow: 0 10px 30px rgba(0,0,0,0.5); transform: rotate(3deg); z-index: 3;">
+        <div style="width: 100%; height: 100%; background: url('images/battery1.jpg') center/cover; filter: brightness(0.9);"></div>
+        <div class="photo-label" style="position: absolute; bottom: -15px; left: -15px; background: var(--secondary); color: #000; padding: 8px 15px; font-weight: 700; transform: rotate(-3deg);">
+          VARTA
+        </div>
+      </div>
+      
+      <!-- Фото 2 (задний план) -->
+      <div class="photo-frame secondary-photo" style="position: absolute; bottom: 0; left: 0; width: 60%; height: 60%; border: 8px solid var(--darker); box-shadow: 0 5px 20px rgba(0,0,0,0.3); transform: rotate(-5deg); z-index: 2;">
+        <div style="width: 100%; height: 100%; background: url('images/battery2.jpg') center/cover; filter: brightness(0.8);"></div>
+      </div>
+      
+      <!-- Фото 3 (акцент) -->
+      <div class="photo-frame accent-photo" style="position: absolute; top: 50%; left: 30%; width: 40%; height: 40%; border: 6px solid var(--darker); box-shadow: 0 0 15px rgba(255,107,0,0.3); transform: translateY(-50%) rotate(8deg); z-index: 4; background: var(--secondary); padding: 5px;">
+        <div style="width: 100%; height: 100%; background: url('images/battery3.jpg') center/cover; border: 2px solid #000;"></div>
+      </div>
+      
+      <!-- Декоративные элементы -->
+      <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; border: 3px dashed rgba(255,107,0,0.3); transform: rotate(15deg);"></div>
+      <div style="position: absolute; bottom: -10px; left: -10px; width: 80px; height: 80px; border: 2px dashed rgba(255,107,0,0.2); transform: rotate(-10deg);"></div>
+    </div>
+  </div>
+  
+  <!-- Фоновые элементы -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, var(--darker) 30%, transparent 70%); z-index: 0;"></div>
+</section>
+
+<style>
+  /* Анимации */
+  .photo-frame {
+    transition: all 0.5s ease;
+  }
+  
+  .main-photo:hover {
+    transform: rotate(5deg) scale(1.03) !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6) !important;
+  }
+  
+  .secondary-photo:hover {
+    transform: rotate(-8deg) scale(1.05) !important;
+    z-index: 5 !important;
+  }
+  
+  .accent-photo:hover {
+    transform: translateY(-50%) rotate(15deg) scale(1.1) !important;
+    box-shadow: 0 0 25px rgba(255,107,0,0.5) !important;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,107,0,0.4);
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .banner {
+      padding: 60px 0;
+    }
+    
+    .container {
+      flex-direction: column;
+    }
+    
+    .banner-gallery {
+      height: 300px;
+      margin-top: 40px;
+    }
+    
+    .main-photo {
+      width: 90% !important;
+    }
+  }
+</style>
+
+	<!-- Секция с товарами -->
+	<section class="products">
+		<div class="container">
+			<h2 class="section-title">ТОП ПРОДАЖ</h2>
+
+			<div class="product-grid">
+				<!-- Товар 1 -->
+				<div class="product-card">
+					<img src="images/battery-premium.png" alt="Varta Silver Dynamic">
+					<h3>Varta Silver Dynamic</h3>
+					<p>Емкость: 80Ah</p>
+					<p>Пусковой ток: 800A</p>
+					<div class="price">8 490 ₽</div>
+					<button class="btn">Купить</button>
+				</div>
+
+				<!-- Товар 2 -->
+				<div class="product-card">
+					<img src="images/battery-performance.png" alt="Bosch S5">
+					<h3>Bosch S5</h3>
+					<p>Емкость: 75Ah</p>
+					<p>Пусковой ток: 750A</p>
+					<div class="price">7 990 ₽</div>
+					<button class="btn">Купить</button>
+				</div>
+
+				<!-- Товар 3 -->
+				<div class="product-card">
+					<img src="images/battery-standard.png" alt="Tudor HighTech Plus">
+					<h3>Tudor HighTech Plus</h3>
+					<p>Емкость: 70Ah</p>
+					<p>Пусковой ток: 700A</p>
+					<div class="price">6 290 ₽</div>
+					<button class="btn">Купить</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Секция услуг с фото менеджера -->
+<section class="services" style="padding: 100px 0; background: var(--darker);">
+	<div class="container" style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
+		<!-- Блок с фото менеджера -->
+		<div style="flex: 1; min-width: 300px; position: relative;">
+			<div style="border: 5px solid var(--secondary); padding: 10px; background: #000;">
+				<img src="images/manager.jpg" alt="Наш специалист" style="width: 100%; display: block; filter: grayscale(30%) contrast(110%);">
+      </div>
+				<div
+					style="position: absolute; bottom: -20px; right: -20px; background: var(--secondary); color: #000; padding: 15px 25px; font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 1.1rem;">
+					Иван Петров
+				</div>
+				<div
+					style="position: absolute; top: -20px; left: -20px; background: #000; color: var(--secondary); border: 2px solid var(--secondary); padding: 10px 20px; font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 0.9rem;">
+					Менеджер
+				</div>
+			</div>
+
+			<!-- Блок с услугами -->
+			<div style="flex: 1; min-width: 300px;">
+				<h2
+					style="color: var(--secondary); font-size: 2.5rem; margin-bottom: 20px; position: relative; display: inline-block;">
+					УСЛУГИ
+					<span style="position: absolute; bottom: -10px; left: 0; width: 100%; height: 3px; background: var(--accent);"></span>
+				</h2>
+
+				<p style="color: var(--text-light); margin-bottom: 40px; font-size: 1.1rem;">
+					Менеджеры компании с радостью ответят на ваши вопросы и помогут с выбором продукции.
+				</p>
+
+				<!-- Список услуг -->
+				<div style="margin-bottom: 40px;">
+					<div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 25px;">
+						<div
+							style="background: var(--secondary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+							<i class="fas fa-headset" style="color: #000; font-size: 1rem;"></i>
+						</div>
+						<div>
+							<h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 1.3rem;">БЕСПЛАТНАЯ
+								КОНСУЛЬТАЦИЯ</h3>
+							<p style="color: var(--text);">Поможем выбрать аккумулятор, идеально подходящий для вашего
+								автомобиля.</p>
+						</div>
+					</div>
+
+					<div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 25px;">
+						<div
+							style="background: var(--secondary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+							<i class="fas fa-exchange-alt" style="color: #000; font-size: 1rem;"></i>
+						</div>
+						<div>
+							<h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 1.3rem;">ОБМЕН
+								АККУМУЛЯТОРА</h3>
+							<p style="color: var(--text);">Сдайте старый аккумулятор и получите скидку до 20% на новый.
+							</p>
+						</div>
+					</div>
+
+					<div style="display: flex; align-items: flex-start; gap: 15px;">
+						<div
+							style="background: var(--secondary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+							<i class="fas fa-battery-three-quarters" style="color: #000; font-size: 1rem;"></i>
+						</div>
+						<div>
+							<h3 style="color: var(--secondary); margin-bottom: 10px; font-size: 1.3rem;">ДИАГНОСТИКА
+							</h3>
+							<p style="color: var(--text);">Бесплатная проверка состояния вашего аккумулятора.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Кнопка -->
+				<button class="btn" style="padding: 15px 40px; font-size: 1.1rem; background: linear-gradient(135deg, var(--secondary), var(--accent)); color: #000; border: none; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+        <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> ЗАДАТЬ ВОПРОС
+      </button>
+			</div>
+		</div>
+</section>
+
+<!-- Блок менеджера с цитатой -->
+<section class="manager-quote"
+	style="padding: 80px 0; background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('images/garage-bg.jpg') center/cover;">
+	<div class="container"
+		style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap; justify-content: center;">
+
+		<!-- Фото менеджера с декоративными элементами -->
+		<div style="position: relative; max-width: 400px;">
+			<div style="border: 5px solid var(--secondary); padding: 10px; background: #000; transform: rotate(-3deg);">
+				<img src="images/manager-alex.jpg" alt="Алексей - менеджер PROAuto" style="width: 100%; display: block; filter: grayscale(20%) contrast(110%);">
+      </div>
+				<div
+					style="position: absolute; bottom: -20px; right: -30px; background: var(--secondary); color: #000; padding: 15px 25px; font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 1.1rem; transform: rotate(3deg);">
+					Алексей
+				</div>
+				<div
+					style="position: absolute; top: -20px; left: -30px; background: #000; color: var(--secondary); border: 2px solid var(--secondary); padding: 10px 20px; font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; transform: rotate(-3deg);">
+					Старший менеджер
+				</div>
+			</div>
+
+			<!-- Цитата в стильном окошке -->
+			<div
+				style="max-width: 500px; position: relative; background: rgba(0,0,0,0.8); border: 3px solid var(--secondary); padding: 40px; box-shadow: 0 0 30px rgba(255,107,0,0.2);">
+				<!-- Декоративные элементы цитаты -->
+				<div
+					style="position: absolute; top: 20px; left: 20px; font-size: 60px; color: rgba(255,107,0,0.3); font-family: Georgia, serif;">
+					&ldquo;</div>
+
+				<h3
+					style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 20px; position: relative; z-index: 2; text-transform: uppercase;">
+					ВАШ АККУМУЛЯТОР - НАША ЗАБОТА!
+				</h3>
+
+				<p
+					style="color: var(--text); font-size: 1.1rem; line-height: 1.6; position: relative; z-index: 2; font-style: italic;">
+					"Каждый день я помогаю десяткам автовладельцев найти идеальный аккумулятор.
+					Не просто продаю - подбираю решение, которое прослужит вам годами.
+					Приходите, и я лично гарантирую: вы уедете с надежным источником энергии
+					и приятной ценой!"
+				</p>
+
+				<div style="display: flex; align-items: center; gap: 15px; margin-top: 30px;">
+					<div style="width: 50px; height: 2px; background: var(--secondary);"></div>
+					<p style="color: var(--secondary); margin: 0; font-weight: 700; text-transform: uppercase;">Алексей
+					</p>
+				</div>
+
+				<!-- Декоративные элементы -->
+				<div
+					style="position: absolute; bottom: 20px; right: 20px; font-size: 60px; color: rgba(255,107,0,0.3); font-family: Georgia, serif; transform: rotate(180deg);">
+					&ldquo;</div>
+			</div>
+		</div>
+</section>
+
+	<!-- О компании -->
+	<section class="about">
+		<div class="container">
+			<div class="about-content">
+				<h2 style="font-size: 2.5rem;">PROAUTO - ЭТО</h2>
+				<p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 40px;">
+					Крупнейший поставщик качественных аккумуляторов и автотоваров с 2010 года.
+					Мы работаем только с проверенными производителями и даем гарантию на всю продукцию.
+				</p>
+
+				<div class="features">
+					<div class="feature-item">
+						<i class="fas fa-medal"></i>
+						<h4>Качество</h4>
+						<p>Сертифицированная продукция</p>
+					</div>
+					<div class="feature-item">
+						<i class="fas fa-warehouse"></i>
+						<h4>Наличие</h4>
+						<p>Собственный склад в Москве</p>
+					</div>
+					<div class="feature-item">
+						<i class="fas fa-tools"></i>
+						<h4>Сервис</h4>
+						<p>Профессиональная установка</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Секция брендов -->
+<section class="brands">
+	<div class="container">
+		<h2 class="brands-title">НАШИ БРЕНДЫ</h2>
+
+		<div class="brands-grid">
+			<div class="brand-item">
+				<img src="images/brands/varta.png" alt="Varta" loading="lazy">
+          </div>
+				<div class="brand-item">
+					<img src="images/brands/bosch.png" alt="Bosch" loading="lazy">
+          </div>
+					<div class="brand-item">
+						<img src="images/brands/optima.png" alt="Optima" loading="lazy">
+          </div>
+						<div class="brand-item">
+							<img src="images/brands/delta.png" alt="Delta" loading="lazy">
+          </div>
+							<div class="brand-item">
+								<img src="images/brands/exide.png" alt="Exide" loading="lazy">
+          </div>
+								<div class="brand-item">
+									<img src="images/brands/mutlu.png" alt="Mutlu" loading="lazy">
+          </div>
+									<div class="brand-item">
+										<img src="images/brands/akom.png" alt="Akom" loading="lazy">
+          </div>
+										<div class="brand-item">
+											<img src="images/brands/tyumen.png" alt="Tyumen" loading="lazy">
+          </div>
+										</div>
+									</div>
+</section>
+
+<!-- Секция отзывов -->
+<section class="testimonials" style="padding: 80px 0; background: url('images/reviews-bg.jpg') center/cover;">
+	<div class="container">
+		<h2 class="section-title"
+			style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--secondary);">
+			ОТЗЫВЫ НАШИХ КЛИЕНТОВ
+			<span style="display: block; width: 80px; height: 3px; background: var(--accent); margin: 15px auto 0;"></span>
+		</h2>
+
+		<div class="testimonials-grid"
+			style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+			<!-- Отзыв 1 -->
+			<div class="testimonial-card"
+				style="background: rgba(0,0,0,0.8); padding: 30px; border-left: 4px solid var(--secondary); position: relative;">
+				<div class="quote-icon"
+					style="position: absolute; top: 20px; right: 20px; color: rgba(255,107,0,0.2); font-size: 50px;">
+					<i class="fas fa-quote-right"></i>
+				</div>
+				<div class="testimonial-content" style="margin-bottom: 20px;">
+					<p style="font-style: italic; color: var(--text); line-height: 1.6;">
+						"Приобрел аккумулятор Varta по выгодной цене. Менеджер Алексей профессионально подобрал модель
+						под мой автомобиль. Работает уже второй год без нареканий!"
+					</p>
+				</div>
+				<div class="testimonial-author" style="display: flex; align-items: center; gap: 15px;">
+					<div class="author-avatar"
+						style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid var(--secondary);">
+						<img src="images/reviews/user1.jpg" alt="Дмитрий" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+						<div class="author-info">
+							<h4 style="color: var(--secondary); margin: 0 0 5px 0;">Дмитрий</h4>
+							<p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">Volkswagen Passat</p>
+							<div class="rating" style="color: var(--accent); margin-top: 5px;">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Отзыв 2 -->
+				<div class="testimonial-card"
+					style="background: rgba(0,0,0,0.8); padding: 30px; border-left: 4px solid var(--secondary); position: relative;">
+					<div class="quote-icon"
+						style="position: absolute; top: 20px; right: 20px; color: rgba(255,107,0,0.2); font-size: 50px;">
+						<i class="fas fa-quote-right"></i>
+					</div>
+					<div class="testimonial-content" style="margin-bottom: 20px;">
+						<p style="font-style: italic; color: var(--text); line-height: 1.6;">
+							"Обменял старый аккумулятор по программе trade-in. Получил хорошую скидку на новую модель
+							Bosch. Сервис на высшем уровне, всем рекомендую!"
+						</p>
+					</div>
+					<div class="testimonial-author" style="display: flex; align-items: center; gap: 15px;">
+						<div class="author-avatar"
+							style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid var(--secondary);">
+							<img src="images/reviews/user2.jpg" alt="Анна" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+							<div class="author-info">
+								<h4 style="color: var(--secondary); margin: 0 0 5px 0;">Василий</h4>
+								<p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">Toyota Camry</p>
+								<div class="rating" style="color: var(--accent); margin-top: 5px;">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star-half-alt"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Отзыв 3 -->
+					<div class="testimonial-card"
+						style="background: rgba(0,0,0,0.8); padding: 30px; border-left: 4px solid var(--secondary); position: relative;">
+						<div class="quote-icon"
+							style="position: absolute; top: 20px; right: 20px; color: rgba(255,107,0,0.2); font-size: 50px;">
+							<i class="fas fa-quote-right"></i>
+						</div>
+						<div class="testimonial-content" style="margin-bottom: 20px;">
+							<p style="font-style: italic; color: var(--text); line-height: 1.6;">
+								"Бесплатная диагностика спасла меня от незапланированной покупки. Оказалось, мой
+								аккумулятор еще на год работы. Честный подход - это редкость сегодня!"
+							</p>
+						</div>
+						<div class="testimonial-author" style="display: flex; align-items: center; gap: 15px;">
+							<div class="author-avatar"
+								style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid var(--secondary);">
+								<img src="images/reviews/user3.jpg" alt="Сергей" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+								<div class="author-info">
+									<h4 style="color: var(--secondary); margin: 0 0 5px 0;">Сергей</h4>
+									<p style="color: var(--text-light); margin: 0; font-size: 0.9rem;">BMW X5</p>
+									<div class="rating" style="color: var(--accent); margin-top: 5px;">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Кнопка "Оставить отзыв" -->
+					<div style="text-align: center; margin-top: 50px;">
+						<button class="btn" style="padding: 15px 40px; font-size: 1.1rem; background: linear-gradient(135deg, var(--secondary), var(--accent)); color: #000; border: none; cursor: pointer;">
+        <i class="fas fa-pencil-alt" style="margin-right: 10px;"></i> ОСТАВИТЬ ОТЗЫВ
+      </button>
+					</div>
+				</div>
+</section>
+
+	<!-- Подвал -->
+	<footer>
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-column">
+					<h3>PROAuto</h3>
+					<p>Продажа аккумуляторов и автотоваров с доставкой по всей России</p>
+					<div class="social-links">
+						<a href="#"><i class="fab fa-vk"></i></a>
+						<a href="#"><i class="fab fa-telegram"></i></a>
+						<a href="#"><i class="fab fa-whatsapp"></i></a>
+					</div>
+				</div>
+
+				<div class="footer-column">
+					<h3>Контакты</h3>
+					<p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Автозаводская, 23</p>
+					<p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+					<p><i class="fas fa-envelope"></i> info@proauto.ru</p>
+				</div>
+
+				<div class="footer-column">
+					<h3>Часы работы</h3>
+					<p>Пн-Пт: 9:00 - 20:00</p>
+					<p>Сб-Вс: 10:00 - 18:00</p>
+				</div>
+			</div>
+
+			<div>
+			
+				<p>© 2025 PROAuto. Все права защищены.</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
